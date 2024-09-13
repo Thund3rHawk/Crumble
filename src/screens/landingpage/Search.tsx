@@ -12,6 +12,7 @@ import {
 import BackBtn from '../../components/BackBtn';
 import {useNavigation} from '@react-navigation/native';
 import Cart from '../../components/Cart';
+
 const resturents = [
   {
     name: 'Pansi Restaurant',
@@ -30,13 +31,13 @@ const resturents = [
   },
 ];
 const fastfood = [
-  {image: require('../../assets/image/brickcoffee.png')},
-  {image: require('../../assets/image/brickcoffee.png')},
-  {image: require('../../assets/image/brickcoffee.png')},
+  {image: require('../../assets/foodImage/image.png')},
+  {image: require('../../assets/foodImage/image.png')},
+  {image: require('../../assets/foodImage/image.png')}, 
 ];
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState<string | null>(null);
-  const [searchHistory, setSearchHistory] = useState<string[]>([]);
+  const [searchHistory, setSearchHistory] = useState<string[]>(['Cookies', 'Sandwich', 'Chips', 'Bakery']);
   const navigation = useNavigation();
 
   const handleSearch = () => {
@@ -90,7 +91,7 @@ const Search = () => {
                   onPress={() => {
                     setSearchTerm(null);
                   }}>
-                  <Image source={require('../../assets/image/close.png')} />
+                  <Image source={require('../../assets/image/close.png')} style = {{height: 10, width: 10}}/>
                 </TouchableOpacity>
               ) : (
                 ''
@@ -151,7 +152,7 @@ const Search = () => {
                 </Text>
                 <View
                   style={{flexDirection: 'row', alignItems: 'center', gap: 5}}>
-                  <Image source={require('../../assets/image/Star1.png')} />
+                  <Image source={require('../../assets/image/Star1.png')} style = {{height: 20, width: 20}}/>
                   <Text style={{color: '#181C2E', fontSize: 16}}>
                     {item.rating}
                   </Text>
@@ -172,7 +173,9 @@ const Search = () => {
             marginVertical: 12,
           }}>
           {fastfood.map((item, index) => (
-            <Image key={index} source={item.image} style={{borderRadius: 15}} />
+            <TouchableOpacity onPress={()=>navigation.navigate('ProductPage')} key={index}>
+              <Image  source={item.image} style={{borderRadius: 15, height: 110, width: 145}} />
+            </TouchableOpacity>
           ))}
         </ScrollView>
       </ScrollView>

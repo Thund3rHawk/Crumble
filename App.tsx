@@ -21,6 +21,10 @@ import Search from './src/screens/landingpage/Search';
 import SearchResult from './src/screens/landingpage/SearchResult';
 import Details from './src/screens/landingpage/Details';
 import CartScreen from './src/screens/landingpage/CartScreen';
+import Successfull from './src/screens/payment/Successfull';
+import AddCard from './src/screens/payment/AddCard';
+import ProductPage from './src/screens/landingpage/ProductPage';
+import ResturantDetails from './src/screens/landingpage/ResturantDetails';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,21 +32,24 @@ function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="LoaderScreen">
-          <Stack.Screen name="LoaderScreen" component={LoaderScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="Signin" component={Signin} options={{ headerShown: false, title: 'Sign In' }} />
-          <Stack.Screen name="Signup" component={Signup} options={{ headerShown: false, title: 'Sign Up' }} />
-          <Stack.Screen name="OTPVerify" component={OTPVerify} options={{ headerShown: false, title: 'Verify OTP' }} />
-          <Stack.Screen name="Location" component={Location} options={{ headerShown: false, title: 'Location' }} />
-          <Stack.Screen name="SigninSuccess" component={SigninSuccess} options={{ headerShown: false, title: 'Sign In Success' }} />
-          <Stack.Screen name="Home" component={Home} options={{ headerShown: false, title: 'Home' }} />
-          <Stack.Screen name="Search" component={Search} options={{ title: 'Search' }} />
-          <Stack.Screen name="SearchResult" component={SearchResult} options={{ title: 'Search Result' }} />
-          <Stack.Screen name="Details" component={Details} options={{ title: 'Details' }} />
-          <Stack.Screen name="CartScreen" component={CartScreen} options={{ headerShown: false, title: 'Cart' }} />
+        <Stack.Navigator initialRouteName="LoaderScreen" screenOptions={{headerShown: false}}>
+          <Stack.Screen name="LoaderScreen" component={LoaderScreen} />
+          <Stack.Screen name="Signin" component={Signin}/>
+          <Stack.Screen name="Signup" component={Signup}/>
+          <Stack.Screen name="OTPVerify" component={OTPVerify}/>
+          <Stack.Screen name="Location" component={Location}/>
+          <Stack.Screen name="SigninSuccess" component={SigninSuccess}/>
+          <Stack.Screen name="Home" component={Home}/>
+          <Stack.Screen name="Search" component={Search}/>
+          <Stack.Screen name="Details" component={Details}/>
+          <Stack.Screen name="CartScreen" component={CartScreen}/>
+          <Stack.Screen name="ProductPage" component={ProductPage}/>
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
+    // <AddCard/>
+    // <ProductPage/>
+    // <ResturantDetails/>
   );
 }
 

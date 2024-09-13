@@ -1,28 +1,28 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-const Btn = (
-  bgColor = '#FF7622',
-  btnLabel: any,
-  textColor = 'white',
-  width = '80%',
+interface props {
+  btnLabel: string,
   Press: any,
-  size = 20,
-) => {
+  style: any
+}
+
+const Btn:React.FC<props> = ({btnLabel, Press, style}) => { 
+
   return (
-    <View>
+    <View style = {[{alignItems: 'center'}, style]}>
       <TouchableOpacity
         onPress={Press}
         style = {{
-          backgroundColor: bgColor,
-          borderRadius: 50,
+          backgroundColor: '#FF7622',
+          borderRadius: 15,
           alignItems: 'center',
-          width: "80%",
-          paddingVertical: 10,
+          width: "90%",
+          paddingVertical: 20,
           marginVertical: 10,
         }}
         >
-        <Text style={{color: textColor, fontSize: size, fontWeight: 600}}>
+        <Text style={{color: 'white', fontSize: 20, fontWeight: 600}}>
           {btnLabel}
         </Text>
       </TouchableOpacity>

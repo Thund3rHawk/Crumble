@@ -42,7 +42,7 @@ const CustomOTPFleld = ({onChange, value, page}: any) => {
     if (updatedValue.join('').length === 4 && page) {
       console.log(text);
       setTimeout(() => {
-        // navigation.navigate(page);
+        navigation.navigate(page);
       }, 2000);
     }
   };

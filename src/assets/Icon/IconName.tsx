@@ -14,6 +14,7 @@ export const DeleteIcon = () => {
     />
   );
 };
+
 export const EditIcon = ({size = 18}) => {
   return <Icons.Feather name={'edit-2'} color={Colors.Blue} size={size} />;
 };
@@ -26,7 +27,7 @@ export const PlusIcon = () => {
   return (
     <Icons.FontAwesome5
       name={'plus'}
-      color={'#fff'}
+      color="#fff"
       size={16}
       style={{marginEnd: 6}}
     />

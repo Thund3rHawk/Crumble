@@ -59,13 +59,13 @@ const Details = ({route}: any) => {
       <View
         style={{
           position: 'absolute',
-          top: 10,
+          top: 25,
           left: 10,
           flexDirection: 'row',
           gap: 10,
           alignItems: 'center',
         }}>
-        <BackBtn />
+        <BackBtn backgroundColor='white'/>
         <Text style={{color: '#fff', fontSize: 17}}>Details</Text>
       </View>
       <ScrollView

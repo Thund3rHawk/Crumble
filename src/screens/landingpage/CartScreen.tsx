@@ -106,6 +106,7 @@ const CartScreen = () => {
                         onPress={() => handleRemoveItem(item.id)}>
                         <Image
                           source={require('../../assets/image/close.png')}
+                          style={{height: 10, width: 10}}
                         />
                       </TouchableOpacity>
                     )}

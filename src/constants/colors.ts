@@ -1,5 +1,6 @@
 interface ColorTypes {
   White: string;
+  DarkBlue: string;
   Orange: string;
   Blue: string;
   ShadowBlue: string;
@@ -25,6 +26,7 @@ interface ColorTypes {
 
 export const Colors: ColorTypes = {
   White: '#ffffff',
+  DarkBlue: '#111A2C',
   Orange: '#FF7622',
   Blue: '#00263E',
   ShadowBlue: '#646982 ',
